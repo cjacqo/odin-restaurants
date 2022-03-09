@@ -1,1 +1,3 @@
-console.log("Hi")
+import { onPageLoad } from "./pageLoad";
+
+onPageLoad()
