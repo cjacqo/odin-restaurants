@@ -1,1 +1,1 @@
-(()=>{"use strict";const e=()=>{const e=document.createElement("div");return e.style.height="500px",e.style.backgroundColor="green",e};(()=>{const t=document.getElementById("content");console.log(e()),t.appendChild(e())})()})();
+(()=>{"use strict";const e=()=>{let e=!1;const t=document.createElement("div");return t.style.height="100px",t.addEventListener("click",(()=>{e=!e,function(e){let n=t.style.height;console.log(n)}()})),t.style.backgroundColor="green",t};(()=>{const t=document.getElementById("content");console.log(e()),t.appendChild(e())})()})();
