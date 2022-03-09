@@ -1,20 +1,10 @@
 const Nav = () => {
     let isOpen = false
+    let id     = null
+    let dif    = null
     const container = document.createElement('div')
 
-    container.style.height = '100px'
-
-    function changeHeight(dif) {
-        let currentHeight = container.style.height
-        console.log(currentHeight)
-    }
-
-    container.addEventListener('click', () => {
-        isOpen = !isOpen
-        let dif = isOpen ? 100 : -100
-        changeHeight(dif)
-
-    })
+    container.style.height = '50px'
 
     container.style.backgroundColor = 'green'
     return container
