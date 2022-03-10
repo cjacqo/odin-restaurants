@@ -8,11 +8,36 @@ const Logo = (title) => {
     return logoContainer
 }
 
+const MenuList = () => {
+    const links = ['Home', 'Menu', 'Contact']
+    const menuListContainer = document.createElement('ul')
+    menuListContainer.classList.add('menu-list-container', 'hidden')
+    links.forEach(li => {
+        let menuItem = document.createElement('li')
+        menuItem.innerText = li
+        menuListContainer.appendChild(menuItem)
+    })
+    return menuListContainer
+}
+
+function toggleMenu(menu) {
+    menu.classList.toggle('hidden')
+}
+
 const NavMenu = () => {
+    let isOpen = false
     const navMenuContainer = document.createElement('div')
     const navMenuIcon      = document.createElement('i')
     navMenuContainer.classList.add('nav-menu-container')
     navMenuIcon.classList.add('fa-solid', 'fa-bars', 'pointer')
+    const menuList = MenuList()
+
+    navMenuIcon.addEventListener('click', () => {
+        isOpen = !isOpen
+        toggleMenu(menuList)
+    })
+
+    navMenuContainer.appendChild(menuList)
     navMenuContainer.appendChild(navMenuIcon)
     return navMenuContainer
 }
