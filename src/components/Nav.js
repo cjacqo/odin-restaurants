@@ -25,7 +25,6 @@ function toggleMenu(menu) {
 }
 
 const NavMenu = () => {
-    let isOpen = false
     const navMenuContainer = document.createElement('div')
     const navMenuIcon      = document.createElement('i')
     navMenuContainer.classList.add('nav-menu-container')
@@ -33,7 +32,6 @@ const NavMenu = () => {
     const menuList = MenuList()
 
     navMenuIcon.addEventListener('click', () => {
-        isOpen = !isOpen
         toggleMenu(menuList)
     })
 
