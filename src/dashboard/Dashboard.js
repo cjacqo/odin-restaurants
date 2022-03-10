@@ -5,11 +5,10 @@ const Dashboard = () => {
     const dashboard = document.createElement('div')
 
     // @@@TEST: practice loading assets
-    const myImg = new Image()
-    myImg.src = Img
+    // const myImg = new Image()
+    // myImg.src = Img
     
     dashboard.appendChild(Header())
-    dashboard.appendChild(myImg)
     return dashboard
 }
 

@@ -10,8 +10,10 @@ const Logo = (title) => {
 
 const NavMenu = () => {
     const navMenuContainer = document.createElement('div')
+    const navMenuIcon      = document.createElement('i')
     navMenuContainer.classList.add('nav-menu-container')
-    navMenuContainer.innerText = 'Hi'
+    navMenuIcon.classList.add('fa-solid', 'fa-bars', 'pointer')
+    navMenuContainer.appendChild(navMenuIcon)
     return navMenuContainer
 }
 

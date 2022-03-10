@@ -10,6 +10,10 @@
     display: flex;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 .nav-container {
     justify-content: space-between;
     align-items: center;
