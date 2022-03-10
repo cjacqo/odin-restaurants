@@ -8,8 +8,16 @@ const Logo = (title) => {
     return logoContainer
 }
 
+const NavMenu = () => {
+    const navMenuContainer = document.createElement('div')
+    navMenuContainer.classList.add('nav-menu-container')
+    navMenuContainer.innerText = 'Hi'
+    return navMenuContainer
+}
+
 const Nav = () => {
     const container = document.createElement('div')
+    container.classList.add('nav-container', 'flex')
 
     container.style.height = '50px'
 
@@ -17,6 +25,7 @@ const Nav = () => {
 
     // --- append children
     container.appendChild(Logo(`P.F. Chang's`))
+    container.appendChild(NavMenu())
     return container
 }
 

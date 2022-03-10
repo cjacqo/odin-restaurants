@@ -5,3 +5,12 @@
     margin: 0;
     padding: 0;
 }
+
+.flex {
+    display: flex;
+}
+
+.nav-container {
+    justify-content: space-between;
+    align-items: center;
+}
