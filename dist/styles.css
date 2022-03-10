@@ -7,12 +7,12 @@
     overflow: hidden;
 }
 
-html,
-body {
-    overflow-y: scroll;
+html {
+    /* overflow-y: scroll; */
 }
 
 body {
+    overflow: hidden;
 }
 
 ul {
