@@ -1,6 +1,11 @@
 import Header from '../layout/Header'
 import Img from '../imgs/img.jpg'
 
+
+// !!! FIGURE OUT HOW TO TRACK NAVIGATION/TABBING TO
+//     CHANGE CONTENT ON THE PAGE
+
+
 const Dashboard = () => {
     const dashboard = document.getElementById('content')
     const header = Header()
