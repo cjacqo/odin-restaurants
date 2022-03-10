@@ -6,4 +6,4 @@ const Header = () => {
     return headerContainer
 }
 
-return Header
+export default Header
