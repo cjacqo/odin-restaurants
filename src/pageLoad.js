@@ -1,9 +1,8 @@
-import Nav from "./components/Nav"
+import Dashboard from "./dashboard/Dashboard"
 
 const onPageLoad = () => {
     const siteParent = document.getElementById('content')
-    console.log(Nav())
-    siteParent.appendChild(Nav())
+    siteParent.appendChild(Dashboard())
 }
 
 export { onPageLoad }
