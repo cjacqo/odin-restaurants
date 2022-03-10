@@ -4,10 +4,15 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+}
+
+html,
+body {
+    overflow-y: scroll;
 }
 
 body {
-    overflow: hidden;
 }
 
 ul {
@@ -22,9 +27,9 @@ ul {
     cursor: pointer;
 }
 
-/* .hidden {
-    display: none;
-} */
+header {
+    overflow:hidden;
+}
 
 .nav-container {
     justify-content: space-between;
@@ -35,12 +40,12 @@ ul {
     position: absolute;
     top: 50px;
     right: 0;
-    width: 500px;
+    width: 100vw;
     background-color: red;
-    transition: right 1000ms ease-in-out;
+    transition: width 1000ms ease-in-out;
 }
 
 .menu-list-container.hidden {
-    right: -100%;
-    transition: right 1000ms ease-in-out;
+    width: 0;
+    transition: width 1000ms ease-in-out;
 }
