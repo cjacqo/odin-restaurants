@@ -9,12 +9,17 @@ import Img from '../imgs/img.jpg'
 const Dashboard = () => {
     const dashboard = document.getElementById('content')
     const header = Header()
+    const { headerContainer, navMenuLinks } = header
+    console.log(navMenuLinks)
 
     // @@@TEST: practice loading assets
     // const myImg = new Image()
     // myImg.src = Img
+
+    // Create event listeners for the nav menu links
     
-    dashboard.appendChild(header)
+    
+    dashboard.appendChild(headerContainer)
     return dashboard
 }
 

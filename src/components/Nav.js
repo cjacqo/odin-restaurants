@@ -15,6 +15,9 @@ const MenuList = () => {
     links.forEach(li => {
         let menuItem = document.createElement('li')
         menuItem.innerText = li
+        menuItem.addEventListener('click', () => {
+            return 'hi'
+        })
         menuListContainer.appendChild(menuItem)
     })
     return menuListContainer
