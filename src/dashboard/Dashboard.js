@@ -1,3 +1,4 @@
+import '../styles.css'
 import Header from '../layout/Header'
 import Img from '../imgs/img.jpg'
 
