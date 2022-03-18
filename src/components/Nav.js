@@ -12,7 +12,7 @@ const Logo = (title) => {
 }
 
 const MenuList = () => {
-    const links = ['Home', 'Menu', 'Contact']
+    const links = ['Home', 'Menu', 'About']
     const menuListContainer = document.createElement('ul')
     menuListContainer.classList.add('menu-list-container', 'hidden')
     links.forEach(li => {
