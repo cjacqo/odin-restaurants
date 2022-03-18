@@ -14,7 +14,7 @@ const Section = (data) => {
     section.classList.add('home-section')
     // 2
     const container = document.createElement('div')
-    container.classList.add('section-container')
+    container.classList.add('section-container', 'container')
     // 3
     const titleContainer = TitleBox(title, subtitle)
     const buttonContainer = Button(button)
@@ -22,6 +22,7 @@ const Section = (data) => {
     container.appendChild(titleContainer)
     container.appendChild(buttonContainer)
     section.appendChild(container)
+    // 5
     return section
 }
 

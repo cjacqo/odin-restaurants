@@ -3,6 +3,8 @@ import Section from '../components/Section'
     1 - select the div on index.html
     2 - create a main element and give it an id specific to this page
     3 - create components
+    4 - append components
+    5 - append main container to the content div (page)
 */
 const Home = () => {
     // 1
