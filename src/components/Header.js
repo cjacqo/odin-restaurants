@@ -1,9 +1,11 @@
 import TitleBox from "../elements/TitleBox"
 
 const Header = (data) => {
-    const { title, subtitle } = data
+    const { title, subtitle, img } = data
     const header = document.createElement('header')
-    header.classList.add('page-header')
+    header.classList.add('page-header', 'flex', 'col')
+    console.log(img)
+    header.style.backgroundImage = `url('${img}')`
     const contentContainer = document.createElement('div')
     contentContainer.classList.add('content-container', 'container')
     const titleContainer = TitleBox(title, subtitle)
