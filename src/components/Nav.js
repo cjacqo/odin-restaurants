@@ -8,6 +8,9 @@ const Logo = (title) => {
     logoText.classList.add('logo-text')
     logoText.innerText = title
     logoContainer.appendChild(logoText)
+    logoContainer.addEventListener('click', () => {
+        render()
+    })
     return logoContainer
 }
 

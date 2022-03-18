@@ -14,15 +14,20 @@ const render = (page) => {
     while (content.children.length > 1) {
         content.children[1].remove()
     }
+    const ul = document.querySelector('ul')
     // 3
     switch(page) {
         case 'Home':
+            console.log(ul)
             Home()
             return
         case 'Menu':
             MainMenu(MenuData)
             return
         default:
+            if (!ul.classList.contains('hidden')) {
+                ul.classList.toggle('hidden')
+            }
             Home()
             return
     }
