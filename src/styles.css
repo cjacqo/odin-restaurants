@@ -7,6 +7,14 @@
     overflow: hidden;
 }
 
+.white {
+    color: #e4e4e4;
+}
+
+.overlay-image {
+    background-color: rgba(0,0,0,0.35);
+}
+
 html {
     /* overflow-y: scroll; */
 }
@@ -67,4 +75,11 @@ main {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.menu-section > .section-head {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 15vh;
 }
