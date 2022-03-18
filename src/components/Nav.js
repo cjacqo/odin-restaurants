@@ -1,3 +1,6 @@
+import render from '../functions/render'
+// import toggleMenu from '../functions/toggleMenu'
+
 const Logo = (title) => {
     const logoContainer = document.createElement('div')
     const logoText      = document.createElement('h3')
@@ -15,9 +18,11 @@ const MenuList = () => {
     links.forEach(li => {
         let menuItem = document.createElement('li')
         menuItem.innerText = li
-        menuItem.addEventListener('click', () => {
-            return 'hi'
-        })
+        menuItem.addEventListener('click', (e) => {
+            e.stopImmediatePropagation()
+            toggleMenu(menuListContainer)
+            render(li)
+        }, true)
         menuListContainer.appendChild(menuItem)
     })
     return menuListContainer
