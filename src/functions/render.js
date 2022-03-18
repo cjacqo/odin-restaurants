@@ -20,8 +20,7 @@ const render = (page) => {
             Home()
             return
         case 'Menu':
-            console.log(MenuData)
-            MainMenu()
+            MainMenu(MenuData)
             return
         default:
             Home()

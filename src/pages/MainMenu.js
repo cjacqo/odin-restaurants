@@ -1,6 +1,7 @@
 import Header from "../components/Header"
 
-const MainMenu = () => {
+const MainMenu = (data) => {
+    console.log(data)
     // 1
     const content = document.getElementById('content')
     // 2
