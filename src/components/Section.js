@@ -1,4 +1,5 @@
 import TitleBox from "../elements/TitleBox"
+import Button from '../elements/Button'
 /*
     1 - create a section div and give it a class name
     2 - create a container div for the content and add a class name
@@ -7,7 +8,7 @@ import TitleBox from "../elements/TitleBox"
     5 - return section
 */
 const Section = (data) => {
-    const { title, subtitle } = data
+    const { title, subtitle, button } = data
     // 1
     const section = document.createElement('section')
     section.classList.add('home-section')
@@ -16,8 +17,10 @@ const Section = (data) => {
     container.classList.add('section-container')
     // 3
     const titleContainer = TitleBox(title, subtitle)
-    // // 4
+    const buttonContainer = Button(button)
+    // 4
     container.appendChild(titleContainer)
+    container.appendChild(buttonContainer)
     section.appendChild(container)
     return section
 }
