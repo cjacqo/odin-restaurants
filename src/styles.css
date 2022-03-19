@@ -118,7 +118,6 @@ header {
     font-size: var(--p);
     font-family: var(--open-sans);
     font-weight: 300;
-    line-height: 100%;
 }
 
 /* ---
@@ -162,6 +161,7 @@ header {
     height: 100%;
     background-color: var(--grey);
     transition: width 1000ms ease-in-out;
+    z-index: 2;
 }
 .nav-list-container.hidden {
     width: 0;
@@ -206,4 +206,16 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 80vh repeat(2, 50vh);
+}
+.home-section {
+    position: relative;
+}
+.home-section:nth-child(1)::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: linear;
 }
