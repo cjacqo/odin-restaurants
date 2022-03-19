@@ -19,6 +19,7 @@ const MenuList = () => {
     menuListContainer.classList.add('nav-list-container', 'hidden')
     links.forEach(li => {
         let menuItem = document.createElement('li')
+        menuItem.classList.add('nav-menu-link', 'pointer')
         menuItem.innerText = li
         menuItem.addEventListener('click', (e) => {
             e.stopImmediatePropagation()

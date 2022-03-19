@@ -25,6 +25,8 @@ const render = (page) => {
             MainMenu(MenuData)
             return
         default:
+            // Condition to toggle classes for animation and changing navMenuIcon
+            //      from times (x) to bars (lines) if the nav menu is not hidden
             if (!ul.classList.contains('hidden')) {
                 const menuIcon = document.getElementById('navMenuIcon')
                 menuIcon.classList.remove('fa-times')
