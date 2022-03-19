@@ -30,7 +30,7 @@ const render = (page) => {
             content.append(footer)
             return
         case 'Menu':
-            const dropDownMenu = DropDownMenu()
+            const dropDownMenu = DropDownMenu(MenuData)
             content.append(dropDownMenu)
             MainMenu(MenuData)
             content.append(footer)
