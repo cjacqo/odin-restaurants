@@ -309,7 +309,16 @@ main {
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
 }
 .drop-down-list-container > * {
+    position: relative;
+    width: 100%;
     padding: var(--smaller) 0;
+}
+.menu-section {
+    position: relative;
+}
+.section-link-tag {
+    position: absolute;
+    top: -120px;
 }
 /* header */
 .page-header {

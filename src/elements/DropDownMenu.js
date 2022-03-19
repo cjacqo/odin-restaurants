@@ -1,3 +1,16 @@
+function toggleMenu(open) {
+    const ul = document.querySelector('.drop-down-list-container')
+    if (open) {
+        ul.style.pointerEvents = 'auto'
+        ul.style.transform = 'translateY(0)'
+        ul.style.opacity = '1'
+    } else {
+        ul.style.pointerEvents = 'none'
+        ul.style.transform = 'translateY(-10px)'
+        ul.style.opacity = '0'
+    }
+}
+
 const DropDownMenu = (data) => {
     let isClicked = false
     const container = document.createElement('div')
@@ -10,17 +23,22 @@ const DropDownMenu = (data) => {
 
     data.forEach(item => {
         const listItem = document.createElement('li')
+        const listLink = document.createElement('a')
         listItem.classList.add('drop-down-list-item', 'pointer')
-        listItem.innerText = item.section
+        listLink.setAttribute('href', `#${item.id}LinkTag`) 
+        listLink.innerText = item.section
+        listLink.addEventListener('click', (e) => {
+            isClicked = false
+            toggleMenu(isClicked)
+        })
+        listItem.appendChild(listLink)
         ul.appendChild(listItem)
     })
 
     button.innerText = 'Menu'
     button.addEventListener('click', () => {
         isClicked = !isClicked
-        ul.style.pointerEvents = isClicked ? 'auto' : 'none'
-        ul.style.transform = isClicked ? 'translateY(0)' : 'translateY(-10px)'
-        ul.style.opacity = isClicked ? '1' : '0'
+        toggleMenu(isClicked)
     })
 
     container.appendChild(button)

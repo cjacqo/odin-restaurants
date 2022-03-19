@@ -67,9 +67,10 @@ const MenuItem = (item) => {
 
 const MenuSection = (data) => {
     // Desctructure data of the menu section
-    const { section, items, header_img } = data
+    const { section, id, items, header_img } = data
 
     // Create containers and elements
+    const sectionLinkTag       = document.createElement('a')
     const sectionContainer     = document.createElement('section')         // section parent container
     const sectionHead          = document.createElement('header')          // section header
     const titleContainer       = document.createElement('div')             // section title container
@@ -80,8 +81,10 @@ const MenuSection = (data) => {
     //      class names for menu item container, and id's
     //      from section name (section)
     sectionContainer.classList.add('menu-section')
+    sectionLinkTag.classList.add('section-link-tag')
+    sectionLinkTag.setAttribute('id', `${id}LinkTag`)
     sectionHead.classList.add('section-head')
-    sectionHead.setAttribute('id', `${section.toLowerCase()}Header`)
+    sectionHead.setAttribute('id', `${id}Header`)
     titleContainer.classList.add('menu-section-title-container', 'white')
     titleText.classList.add('menu-section-title-text')
     sectionListContainer.classList.add('menu-list-container', 'flex', 'col')
@@ -96,6 +99,7 @@ const MenuSection = (data) => {
     // Append necessary children to their parents
     titleContainer.appendChild(titleText)
     sectionHead.appendChild(titleContainer)
+    sectionContainer.appendChild(sectionLinkTag)
     sectionContainer.appendChild(sectionHead)
 
     // Loop over the items, for each item create a MenuItem
