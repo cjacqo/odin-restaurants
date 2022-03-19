@@ -73,6 +73,21 @@ header {
 }
 
 /* ---
+    Button Styles
+--- */
+.button-container {
+}
+
+.primary-btn {
+    padding: 0.5rem 2rem;
+    width: 100%;
+    background-color: var(--ros-red);
+    color: var(--white-two);
+    text-transform: uppercase;
+    font-family: var(--open-sans);
+}
+
+/* ---
     Nav Container
 --- */
 /* navigation parent styles */

@@ -1,11 +1,17 @@
 const Button = (btnText) => {
+    // Create container and element
     const container = document.createElement('div')
-    container.classList.add('button-container')
     const btn = document.createElement('button')
-    btn.classList.add('primary-btn')
+    // Add class names
+    container.classList.add('button-container')
+    btn.classList.add('primary-btn', 'pointer')
+    // Insert text to the button
     btn.innerText = btnText
-    // event listener hear that calls a function
+    // Add event listener here that calls a function
+    
+    // Append button to the container
     container.appendChild(btn)
+    // Return the container
     return container
 }
 
