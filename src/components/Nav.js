@@ -31,6 +31,15 @@ const MenuList = () => {
     return menuListContainer
 }
 
+function preventScroll(scroll) {
+    const body = document.body
+    if (scroll) {
+        body.style.position = 'fixed'
+    } else {
+        body.style.position = ''
+    }
+}
+
 function toggleMenu(menu) {
     // get nav menu icon (bars or times) to swap the class
     const menuIcon = document.getElementById('navMenuIcon')
@@ -39,9 +48,11 @@ function toggleMenu(menu) {
     if (menu.classList.contains('hidden')) {
         menuIcon.classList.remove('fa-times')
         menuIcon.classList.add('fa-bars')
+        preventScroll(false)
     } else {
         menuIcon.classList.remove('fa-bars')
         menuIcon.classList.add('fa-times')
+        preventScroll(true)
     }
 }
 
