@@ -4,7 +4,7 @@ const TitleBox = (title, subtitle) => {
     const titleText = document.createElement('h1')
     const subtitleText = document.createElement('h6')
     // Add class names
-    container.classList.add('text-container')
+    container.classList.add('text-container', 'flex', 'col')
     titleText.classList.add('title-text')
     subtitleText.classList.add('sub-title-text')
     // Insert title to the titleText element and append

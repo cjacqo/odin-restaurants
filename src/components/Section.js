@@ -15,7 +15,7 @@ const Section = (data) => {
     section.classList.add('home-section', 'flex', 'col')
     // 2
     const container = document.createElement('div')
-    container.classList.add('section-container', 'container')
+    container.classList.add('section-container', 'container', 'flex', 'col')
     // 3
     const titleContainer = TitleBox(title, subtitle)
     const buttonContainer = Button(button)

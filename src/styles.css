@@ -96,23 +96,35 @@ header {
     width: 90%;
     margin: 0 auto;
     text-align: center;
+    gap: var(--smallest);           /* because it is a flex set to colum container */
 }
 
 /* ---
     Text Styles
 --- */
+.text-container {
+    gap: var(--smallest);           /* because it is a flex set to colum container */
+    margin-left: var(--smaller);
+    margin-right: var(--smaller);
+    margin-bottom: var(--smaller);
+}
 .title-text {
-    font-size: 2.75rem;
+    font-size: var(--h2);
     text-transform: uppercase;
     font-family: var(--marcellus);
+    letter-spacing: 2px;
+}
+.sub-title-text {
+    font-size: var(--p);
+    font-family: var(--open-sans);
+    font-weight: 300;
+    line-height: 100%;
 }
 
 /* ---
     Button Styles
 --- */
-.button-container {
-}
-
+.button-container {}
 .primary-btn {
     padding: 1rem 2rem;
     width: 100%;
@@ -193,9 +205,5 @@ main {
 .main-grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
-}
-
-.home-section:nth-child(1) {
-    height: 80vh;
+    grid-template-rows: 80vh repeat(2, 50vh);
 }
