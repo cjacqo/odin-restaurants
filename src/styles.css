@@ -224,7 +224,7 @@ button {
 .nav-menu-link {
     padding: var(--smaller) 0;
     text-transform: uppercase;
-    font-size: var(--h4);
+    font-size: var(--p);
 }
 /* navigation icon container */
 .nav-menu-container {
