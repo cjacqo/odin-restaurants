@@ -328,6 +328,7 @@ main {
 .drop-down-list-item > * {
     color: var(--white-two);
     text-decoration: none;
+    font-family: var(--open-sans);
 }
 .menu-section {
     position: relative;
