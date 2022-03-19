@@ -2,6 +2,7 @@ import Home from '../pages/Home'
 import MainMenu from '../pages/MainMenu'
 import DropDownMenu from '../elements/DropDownMenu'
 import MenuData from '../data/menu_data'
+import About from '../pages/About'
 import Footer from '../components/Footer'
 
 /*
@@ -27,13 +28,17 @@ const render = (page) => {
         case 'Home':
             console.log(ul)
             Home()
-            content.append(footer)
+            content.appendChild(footer)
             return
         case 'Menu':
             const dropDownMenu = DropDownMenu(MenuData)
             content.append(dropDownMenu)
             MainMenu(MenuData)
-            content.append(footer)
+            content.appendChild(footer)
+            return
+        case 'About':
+            About()
+            content.appendChild(footer)
             return
         default:
             // Condition to toggle classes for animation and changing navMenuIcon
@@ -45,7 +50,7 @@ const render = (page) => {
                 ul.classList.toggle('hidden')
             }
             Home()
-            content.append(footer)
+            content.appendChild(footer)
             return
     }
 }
