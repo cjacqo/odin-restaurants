@@ -12,7 +12,7 @@ const Section = (data) => {
     const { title, subtitle, button, img } = data
     // 1
     const section = document.createElement('section')
-    section.classList.add('home-section')
+    section.classList.add('home-section', 'flex', 'col')
     // 2
     const container = document.createElement('div')
     container.classList.add('section-container', 'container')

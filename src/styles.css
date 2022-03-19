@@ -24,20 +24,21 @@
 }
 
 html {
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
     background-color: var(--black);
     color: var(--white-two);
 }
 
 body {
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 /* ---
     Parent Container
 --- */
 #content {
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
+    /* height: 100%; */
 }
 
 /* ---
@@ -72,6 +73,19 @@ header {
     background-color: rgba(0,0,0,0.35);
 }
 
+.home-section {
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section-container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
 /* ---
     Button Styles
 --- */
@@ -79,12 +93,13 @@ header {
 }
 
 .primary-btn {
-    padding: 0.5rem 2rem;
+    padding: 1rem 2rem;
     width: 100%;
     background-color: var(--ros-red);
     color: var(--white-two);
     text-transform: uppercase;
     font-family: var(--open-sans);
+    font-size: 1.1rem;
 }
 
 /* ---
@@ -149,4 +164,17 @@ main {
     background-repeat: no-repeat;
     width: 100vw;
     height: 15vh;
+}
+
+/* ---
+    Home Page
+--- */
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.home-section:nth-child(1) {
+    height: 80vh;
 }
