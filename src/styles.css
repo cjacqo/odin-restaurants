@@ -116,6 +116,7 @@ header {
     letter-spacing: 2px;
 }
 .sub-title-text {
+    color: var(--white-one);
     font-size: var(--p);
     font-family: var(--open-sans);
     font-weight: 300;
@@ -128,12 +129,18 @@ header {
 .primary-btn {
     padding: 1rem 2rem;
     width: 100%;
-    background-color: var(--ros-red);
     color: var(--white-two);
+    background-color: var(--ros-red);
+    border: 2px solid transparent;
     text-transform: uppercase;
     font-family: var(--open-sans);
     font-size: var(--small);
     font-weight: bold;
+}
+.primary-btn:hover {
+    background-color: transparent;
+    border: 2px solid var(--white-two);
+    text-decoration: underline;
 }
 
 /* ---
