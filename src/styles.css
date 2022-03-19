@@ -217,6 +217,7 @@ main {
 }
 .home-section {
     position: relative;
+    border-bottom: 3px solid var(--grey);
 }
 .home-section:nth-child(1) {
     margin-top: var(--h4);
