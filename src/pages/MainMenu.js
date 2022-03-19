@@ -15,6 +15,7 @@ const MainMenu = (data) => {
     // 4
     data.forEach(sec => {
         const section = MenuSection(sec)
+        console.log(section)
         main.appendChild(section)
     })
     // main.appendChild()

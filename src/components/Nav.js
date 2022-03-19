@@ -1,5 +1,4 @@
 import render from '../functions/render'
-// import toggleMenu from '../functions/toggleMenu'
 
 const Logo = (title) => {
     const logoContainer = document.createElement('div')
@@ -17,7 +16,7 @@ const Logo = (title) => {
 const MenuList = () => {
     const links = ['Home', 'Menu', 'About']
     const menuListContainer = document.createElement('ul')
-    menuListContainer.classList.add('menu-list-container', 'hidden')
+    menuListContainer.classList.add('nav-list-container', 'hidden')
     links.forEach(li => {
         let menuItem = document.createElement('li')
         menuItem.innerText = li
