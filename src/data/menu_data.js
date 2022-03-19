@@ -1,5 +1,8 @@
 // HEADER IMAGE IMPORTS
 import Appetizer from '../imgs/header/appetizers_header_lg.jpg'
+import DimSum from '../imgs/header/dim_sum_header_lg.jpeg'
+import Sushi from '../imgs/header/sushi_header_lg.jpeg'
+import SaladSoup from '../imgs/header/salad_soup_header_lg.jpg'
 
 // MENU ITEM IMAGE IMPORTS
 // --- Appetizers
@@ -18,6 +21,7 @@ const MenuData = [
     // - Appetizers
     {
         section: 'Appetizers',
+        id: 'appetizers',
         header_img: Appetizer,
         items: [
             {
@@ -103,8 +107,157 @@ const MenuData = [
                 img: DynamiteShrimp
             },
         ]
+    },
+    // - Dim Sum
+    {
+        section: 'Dim Sum',
+        id: 'dimsum',
+        header_img: DimSum,
+        items: [
+            {
+                title: `Handmade Dumplings`,
+                description: `Pan-fried or steamed, light chili sauce drizzle`,
+                spicy: false,
+                vegetarian: false,
+                gfo: false,
+                options: `Protein options: Pork, Shrimp*`,
+                img: LettuceWraps
+            },
+            {
+                title: `Vegetable Spring Rolls`,
+                description: `Crispy rolls with julienned veggies, sweet chili dipping sauce`,
+                spicy: false,
+                vegetarian: false,
+                gfo: false,
+                options: null,
+                img: LettuceWraps
+            },
+            {
+                title: `Pork Egg Rolls`,
+                description: `With julienned veggies, sweet and sour mustard sauce`,
+                spicy: false,
+                vegetarian: false,
+                gfo: false,
+                options: null,
+                img: LettuceWraps
+            },
+            {
+                title: `Hand-Folded Crab Wontons`,
+                description: `Creamy crab filling, bell pepper, green onion, spicy plum sauce`,
+                spicy: false,
+                vegetarian: false,
+                gfo: false,
+                options: null,
+                img: LettuceWraps
+            },
+        ]
+    },
+    // - Sushi
+    {
+        section: 'Sushi',
+        id: 'sushi',
+        header_img: Sushi,
+        items: [
+            {
+                title: `Dynamite Roll`,
+                description: `Tempura-battered shrimp, signature California roll, sriracha aioli, umami sauce, smoked tableside`,
+                spicy: true,
+                vegetarian: false,
+                gfo: false,
+                options: null,
+                img: LettuceWraps
+            },
+            {
+                title: `Kung Pao Dragon Roll`,
+                description: `Signature California roll, seared Ahi, sriracha, tempura crunch, peanuts, smoked tableside`,
+                spicy: true,
+                vegetarian: false,
+                gfo: false,
+                options: null,
+                img: LettuceWraps
+            },
+            {
+                title: `Shrimp Tempura Roll`,
+                description: `Tempura shrimp, kani kama, cucumber, avocado, umami sauce`,
+                spicy: false,
+                vegetarian: false,
+                gfo: false,
+                options: null,
+                img: LettuceWraps
+            },
+            {
+                title: `Spicy Tuna Roll`,
+                description: `Ahi, cucumber, spicy sriracha`,
+                spicy: true,
+                vegetarian: false,
+                gfo: false,
+                options: null,
+                img: LettuceWraps
+            },
+            {
+                title: `Califoria Roll`,
+                description: `Kani kama, cucumber, avocado, umami sauce`,
+                spicy: false,
+                vegetarian: false,
+                gfo: false,
+                options: null,
+                img: LettuceWraps
+            }
+        ]
+    },
+    // - Sushi
+    {
+        section: 'Salads & Soups',
+        id: 'saladsoup',
+        header_img: SaladSoup,
+        items: [
+            {
+                title: `Asian Caesar Salad`,
+                description: `Romaine, parmesan, toasted sesame seeds, wonton croutons`,
+                spicy: false,
+                vegetarian: false,
+                gfo: false,
+                options: 'Protein options: Chicken, Salmon*',
+                img: LettuceWraps
+            },
+            {
+                title: `Egg Drop Soup`,
+                description: `Velvety broth, julienned carrots, green onion`,
+                spicy: false,
+                vegetarian: false,
+                gfo: true,
+                options: null,
+                img: LettuceWraps
+            },
+            {
+                title: `Mandarin Crunch Salad`,
+                description: `Julienned vegetables, cabbage, mandarin orange, almonds, rice sticks, mandarin vinaigrette`,
+                spicy: false,
+                vegetarian: false,
+                gfo: false,
+                options: 'Protein options: Chicken, Salmon*',
+                img: LettuceWraps
+            },
+            {
+                title: `Hot & Sour Soup`,
+                description: `Rich and tangy broth, silken tofu, chicken, bamboo shoots, egg`,
+                spicy: false,
+                vegetarian: false,
+                gfo: false,
+                options: null,
+                img: LettuceWraps
+            },
+            {
+                title: `Wonton Soup`,
+                description: `Savory broth, house-made pork wontons, shrimp, chicken`,
+                spicy: false,
+                vegetarian: false,
+                gfo: false,
+                options: null,
+                img: LettuceWraps
+            }
+        ]
     }
-
 ]
 
 export default MenuData
