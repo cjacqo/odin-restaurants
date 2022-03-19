@@ -3,7 +3,6 @@ import MenuSection from "../components/MenuSection"
 import HeaderImage from '../imgs/header/main_menu_header_lg.jpg'
 
 const MainMenu = (data) => {
-    console.log(data)
     // 1
     const content = document.getElementById('content')
     // 2

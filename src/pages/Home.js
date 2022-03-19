@@ -1,4 +1,7 @@
 import Section from '../components/Section'
+import SectionOneImg from '../imgs/header/home_section_one.jpg'
+import SectionTwoImg from '../imgs/header/home_section_two.jpeg'
+import SectionThreeImg from '../imgs/header/home_section_three.png'
 /*
     1 - select the div on index.html
     2 - create a main element and give it an id specific to this page
@@ -14,9 +17,9 @@ const Home = () => {
     main.classList.add('main-grid')
     main.setAttribute('id', 'homeMain')
     // 3
-    const sectionOne    = Section({ title: 'Celebrate with a toast', subtitle: 'New Iwai of the Tiger cocktail', button: 'Make a Reservation' })
-    const sectionTwo    = Section({ title: 'Your favorites, brought home', subtitle: 'with Delivery, Curbside Pickup & Takeout', button: 'Order Online'})
-    const sectionThree  = Section({ title: 'Introducing the official shop', subtitle: 'Exclusive apparel, accessories & cookware', button: 'Shop Now'})
+    const sectionOne    = Section({ title: 'Celebrate with a toast', subtitle: 'New Iwai of the Tiger cocktail', button: 'Make a Reservation', img: SectionOneImg })
+    const sectionTwo    = Section({ title: 'Your favorites, brought home', subtitle: 'with Delivery, Curbside Pickup & Takeout', button: 'Order Online', img: SectionTwoImg })
+    const sectionThree  = Section({ title: 'Introducing the official shop', subtitle: 'Exclusive apparel, accessories & cookware', button: 'Shop Now', img: SectionThreeImg })
     // 4
     main.appendChild(sectionOne)
     main.appendChild(sectionTwo)
