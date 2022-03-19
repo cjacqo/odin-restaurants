@@ -1,4 +1,5 @@
 import Header from "../components/Header"
+import DropDownMenu from '../elements/DropDownMenu'
 import MenuSection from "../components/MenuSection"
 import HeaderImage from '../imgs/header/main_menu_header_lg.jpg'
 
@@ -11,6 +12,7 @@ const MainMenu = (data) => {
     const main    = document.createElement('main')
     main.classList.add('main-flex')
     main.setAttribute('id', 'menuMain')
+    // main.appendChild(dropDownMenu)
     // 4
     data.forEach(sec => {
         const section = MenuSection(sec)

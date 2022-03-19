@@ -261,6 +261,18 @@ main {
 /* ---
     Menu's Page
 --- */
+/* dropdown menu */
+.drop-down-container {
+    position: relative;
+}
+.drop-down-list-container {
+    position: absolute;
+    left: 0;
+    top: calc(100% + 0.25rem);
+    background-color: var(--ros-red);
+    padding: 0.75rem;
+}
+/* header */
 .page-header {
     position: relative;
 }

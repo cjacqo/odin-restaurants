@@ -1,5 +1,6 @@
 import Home from '../pages/Home'
 import MainMenu from '../pages/MainMenu'
+import DropDownMenu from '../elements/DropDownMenu'
 import MenuData from '../data/menu_data'
 import Footer from '../components/Footer'
 
@@ -29,6 +30,8 @@ const render = (page) => {
             content.append(footer)
             return
         case 'Menu':
+            const dropDownMenu = DropDownMenu()
+            content.append(dropDownMenu)
             MainMenu(MenuData)
             content.append(footer)
             return
