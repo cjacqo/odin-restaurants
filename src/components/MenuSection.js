@@ -12,10 +12,12 @@ const MenuItem = (item) => {
     const itemDescription      = document.createElement('p')        // text for item description
 
     // Add universal class names for global style settings, class names for menu item container
-    itemContainer.classList.add('menu-item-container')
-    topBar.classList.add('flex')
-    bottomBar.classList.add('flex', 'col')
-    iconsContainer.classList.add('flex')
+    itemContainer.classList.add('menu-item-container', 'flex', 'col')
+    topBar.classList.add('menu-item-title-icons-container', 'flex')
+    bottomBar.classList.add('menu-item-description-container', 'flex', 'col')
+    iconsContainer.classList.add('menu-item-icons-container', 'flex')
+    descriptionContainer.classList.add('menu-item-description-wrapper')
+    itemTitle.classList.add('food-item-title', 'pointer')
     // Add the text to the necessary elements
     itemTitle.innerText        = title
     itemDescription.innerText  = description
@@ -82,7 +84,7 @@ const MenuSection = (data) => {
     sectionHead.setAttribute('id', `${section.toLowerCase()}Header`)
     titleContainer.classList.add('menu-section-title-container', 'white')
     titleText.classList.add('menu-section-title-text')
-    sectionListContainer.classList.add('menu-list-container')
+    sectionListContainer.classList.add('menu-list-container', 'flex', 'col')
     sectionListContainer.setAttribute('id', `${section.toLowerCase()}ListContainer`)
 
     // Add background image to the sectionHead container

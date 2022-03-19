@@ -255,6 +255,36 @@ main {
     background-color: rgba(0,0,0,0.45);
 }
 
+/* ---
+    Menu's Page
+--- */
+.menu-list-container {
+    padding: var(--h4) 0;
+    gap: var(--h4);
+}
+.menu-item-container {
+    width: 85%;
+    margin: 0 auto;
+    gap: 10px;
+}
+.menu-item-title-icons-container {
+    gap: 10px;
+    align-items: center;
+}
+.food-item-title {
+    font-family: var(--marcellus);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+    letter-spacing: 2px;
+}
+.menu-item-icons-container {
+    gap: 10px;
+}
+.options-text {
+    font-style: italic;
+}
+
 /*---
     Footer
 --- */
