@@ -14,7 +14,7 @@ const SocialBox = () => {
 
     container.classList.add('social-box-container', 'flex', 'col')
     orderContainer.classList.add('order-btn-container')
-    iconContainer.classList.add('social-icons-container')
+    iconContainer.classList.add('social-icons-container', 'flex')
     orderButton.classList.add('secondary-btn')
 
     orderButton.innerText = 'Order online'

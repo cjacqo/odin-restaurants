@@ -125,27 +125,35 @@ header {
 /* ---
     Button Styles
 --- */
-.button-container {}
+button {
+    text-transform: uppercase;
+    font-family: var(--open-sans);
+    font-size: var(--small);
+    font-weight: bold;
+}
 .primary-btn {
     padding: 1rem 2rem;
     width: 100%;
     color: var(--white-two);
     background-color: var(--ros-red);
     border: 2px solid transparent;
-    text-transform: uppercase;
-    font-family: var(--open-sans);
-    font-size: var(--small);
-    font-weight: bold;
 }
 .primary-btn:hover {
     background-color: transparent;
     border: 2px solid var(--white-two);
     text-decoration: underline;
 }
+.secondary-btn {
+    padding: 0.5rem 2rem;
+    color: var(--ros-red);
+    background-color: var(--white-two);
+    border: 2px solid transparent;
+}
 
 /* ---
     Nav Container
 --- */
+/* --- MAIN NAVIGATION */
 /* navigation parent styles */
 .nav-container {
     justify-content: space-between;
@@ -245,4 +253,38 @@ main {
 .home-section:nth-child(2)::after,
 .home-section:nth-child(3)::after {
     background-color: rgba(0,0,0,0.45);
+}
+
+/*---
+    Footer
+--- */
+footer {
+    background-color: var(--ros-red);
+}
+.footer-content-container {
+    width: 90%;
+    margin: 10px auto;
+    gap: 20px;
+}
+/* TOP */
+/* navigation */
+.hz-nav-list-container {
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    font-family: var(--open-sans);
+    font-size: var(--small);
+    text-transform: uppercase;
+}
+/* BOTTOM */
+.social-box-container {
+    text-align: center;
+    gap: 20px;
+}
+/* social media icons */
+.social-icons-container {
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 5rem;
+    font-size: var(--h3);
 }

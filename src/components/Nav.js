@@ -19,7 +19,7 @@ const MenuList = (addHidden) => {
     if (addHidden) {
         menuListContainer.classList.add('nav-list-container', 'hidden')
     } else {
-        menuListContainer.classList.add('hz-nav-list-container')
+        menuListContainer.classList.add('hz-nav-list-container', 'flex')
     }
     links.forEach(li => {
         let menuItem = document.createElement('li')
