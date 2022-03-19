@@ -26,6 +26,9 @@ const render = (page) => {
             return
         default:
             if (!ul.classList.contains('hidden')) {
+                const menuIcon = document.getElementById('navMenuIcon')
+                menuIcon.classList.remove('fa-times')
+                menuIcon.classList.add('fa-bars')
                 ul.classList.toggle('hidden')
             }
             Home()
