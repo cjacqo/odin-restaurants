@@ -10,6 +10,8 @@
     --marcellus: 'Marcellus', serif;
     --open-sans: 'Open Sans', sans-serif;
     --patrick: 'Patrick Hand', cursive;
+    /* Heights */
+    --nav-height: 60px;
 }
 
 *,
@@ -21,10 +23,6 @@
     overflow: hidden;
 }
 
-.white {
-    color: #e4e4e4;
-}
-
 .overlay-image {
     background-color: rgba(0,0,0,0.35);
 }
@@ -32,7 +30,7 @@
 html {
     /* overflow-y: scroll; */
     background-color: var(--black);
-    color: var(--white-one);
+    color: var(--white-two);
 }
 
 body {
@@ -60,21 +58,24 @@ ul {
 }
 
 header {
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .nav-container {
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
+    height: var(--nav-height);
+    background-color: var(--black);
 }
 
 .nav-list-container {
     position: absolute;
-    top: 50px;
+    top: var(--nav-height);
     right: 0;
     width: 100vw;
-    background-color: red;
+    height: 100%;
+    background-color: var(--grey);
     transition: width 1000ms ease-in-out;
 }
 

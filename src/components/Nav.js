@@ -54,10 +54,6 @@ const Nav = () => {
     const container = document.createElement('div')
     container.classList.add('nav-container', 'flex')
 
-    container.style.height = '50px'
-
-    container.style.backgroundColor = 'green'
-
     // --- append children
     container.appendChild(Logo(`P.F. Chang's`))
     container.appendChild(NavMenu())
