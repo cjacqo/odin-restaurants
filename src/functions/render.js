@@ -1,11 +1,16 @@
 import Home from '../pages/Home'
 import MainMenu from '../pages/MainMenu'
 import MenuData from '../data/menu_data'
+import { Nav } from '../components/Nav'
+import Footer from '../components/Footer'
 
 /*
     1 - select the content div
     2 - remove the content from it
-    3 - switch statement to run page
+    3 - create navigation and footer components; append JUST the navigation to content
+    4 - query select the ul from the just append Nav component
+    5 - switch statement to run page
+    6 - append the footer to the content div
 */
 const render = (page) => {
     // 1
@@ -14,16 +19,19 @@ const render = (page) => {
     while (content.children.length > 1) {
         content.children[1].remove()
     }
-    const ul = document.querySelector('ul')
     // 3
+    const navigation = Nav()
+    const footer = Footer()
+    content.appendChild(navigation)
+    // 4
+    const ul = document.querySelector('ul')
+    // 5
     switch(page) {
         case 'Home':
             console.log(ul)
             Home()
-            return
         case 'Menu':
             MainMenu(MenuData)
-            return
         default:
             // Condition to toggle classes for animation and changing navMenuIcon
             //      from times (x) to bars (lines) if the nav menu is not hidden
@@ -33,9 +41,11 @@ const render = (page) => {
                 menuIcon.classList.add('fa-bars')
                 ul.classList.toggle('hidden')
             }
+            console.log("HIDIDI")
             Home()
-            return
     }
+    // 6
+    content.appendChild(footer)
 }
 
 export default render

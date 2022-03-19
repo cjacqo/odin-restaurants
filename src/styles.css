@@ -116,6 +116,7 @@ header {
     letter-spacing: 2px;
 }
 .sub-title-text {
+    color: white;
     font-size: var(--p);
     font-family: var(--open-sans);
     font-weight: 300;

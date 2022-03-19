@@ -13,10 +13,14 @@ const Logo = (title) => {
     return logoContainer
 }
 
-const MenuList = () => {
+const MenuList = (addHidden) => {
     const links = ['Home', 'Menu', 'About']
     const menuListContainer = document.createElement('ul')
-    menuListContainer.classList.add('nav-list-container', 'hidden')
+    if (addHidden) {
+        menuListContainer.classList.add('nav-list-container', 'hidden')
+    } else {
+        menuListContainer.classList.add('hz-nav-list-container')
+    }
     links.forEach(li => {
         let menuItem = document.createElement('li')
         menuItem.classList.add('nav-menu-link', 'pointer')
@@ -62,7 +66,7 @@ const NavMenu = () => {
     navMenuContainer.classList.add('nav-menu-container')
     navMenuIcon.classList.add('fa-solid', 'fa-bars', 'pointer', 'nav-menu-icon')
     navMenuIcon.setAttribute('id', 'navMenuIcon')
-    const menuList = MenuList()
+    const menuList = MenuList(true)
 
     navMenuIcon.addEventListener('click', () => {
         toggleMenu(menuList)
@@ -83,4 +87,13 @@ const Nav = () => {
     return container
 }
 
-export default Nav
+const HorizontalNav = () => {
+    const container = document.createElement('div')
+    container.classList.add('hz-nav-container', 'flex')
+
+    // --- append children
+    container.appendChild(MenuList(false))
+    return container
+}
+
+export {Nav, HorizontalNav}
