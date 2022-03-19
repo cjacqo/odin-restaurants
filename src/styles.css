@@ -265,7 +265,6 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: 80vh repeat(2, 50vh);
     position: relative;
-    top: 120px;
 }
 .home-section {
     position: relative;
@@ -274,6 +273,13 @@ main {
 .home-section:nth-child(1) {
     margin-top: var(--h4);
     justify-content: flex-start;
+}
+
+.home-section:nth-child(1) > .section-container {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -12%);
 }
 
 /* ---
