@@ -23,6 +23,7 @@
     --smallest: 0.512rem;
     /* Heights */
     --nav-height: 60px;
+    --current-slide: 0;
 }
 
 *,
@@ -383,6 +384,49 @@ main {
 }
 .options-text {
     font-style: italic;
+}
+
+/* ---
+    About Page
+--- */
+#aboutHeader {
+    margin-top: 60px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.carousel-container {
+    --current-slide: 0;
+    position: relative;
+    overflow: hidden;
+}
+.carousel-buttons-container {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.carousel-buttons-container > * {
+    padding: 0;
+    margin: 0.5rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.1s ease-in;
+    width: 25px;
+    height: 25px;
+    background-color: #FFFFFF;
+}
+.carousel-buttons-container > *:hover {
+    color: rgba(0,0,0,0.5);
+}
+.slides-container {
+    display: flex;
+    transition: transform 0.5s;
+    transform: translateX(calc(-100% * var(--current-slide)));
+}
+.slides-container > * {
+    flex: 0 0 100%;
 }
 
 /*---

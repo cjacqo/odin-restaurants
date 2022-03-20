@@ -8,22 +8,26 @@ import Button from '../elements/Button'
     5 - append elements to the container, append container to section
     6 - return section
 */
-const Section = (data) => {
+const Section = (data, page) => {
+    console.log(data)
     const { title, subtitle, button, img } = data
     // 1
     const section = document.createElement('section')
-    section.classList.add('home-section', 'flex', 'col')
+    section.classList.add(`${page}-section`, 'flex', 'col')
     // 2
     const container = document.createElement('div')
     container.classList.add('section-container', 'container', 'flex', 'col')
     // 3
     const titleContainer = TitleBox(title, subtitle)
-    const buttonContainer = Button(button)
     // 4
     section.style.backgroundImage = `url('${img}')`
     // 5
     container.appendChild(titleContainer)
-    container.appendChild(buttonContainer)
+    if (button) {
+        const buttonContainer = Button(button)
+        container.appendChild(buttonContainer)
+    }
+    
     section.appendChild(container)
     // 6
     return section

@@ -3,6 +3,7 @@ import MainMenu from '../pages/MainMenu'
 import DropDownMenu from '../elements/DropDownMenu'
 import MenuData from '../data/menu_data'
 import About from '../pages/About'
+import CarouselData from '../data/carousel_data'
 import Footer from '../components/Footer'
 
 /*
@@ -37,7 +38,7 @@ const render = (page) => {
             content.appendChild(footer)
             return
         case 'About':
-            About()
+            About(CarouselData)
             content.appendChild(footer)
             return
         default:

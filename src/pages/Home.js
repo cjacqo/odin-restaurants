@@ -17,9 +17,9 @@ const Home = () => {
     main.classList.add('main-grid')
     main.setAttribute('id', 'homeMain')
     // 3
-    const sectionOne    = Section({ title: 'Celebrate with a toast', subtitle: 'New Iwai of the Tiger cocktail', button: 'Make a Reservation', img: SectionOneImg })
-    const sectionTwo    = Section({ title: 'Your favorites, brought home', subtitle: 'with Delivery, Curbside Pickup & Takeout', button: 'Order Online', img: SectionTwoImg })
-    const sectionThree  = Section({ title: 'Introducing the official shop', subtitle: 'Exclusive apparel, accessories & cookware', button: 'Shop Now', img: SectionThreeImg })
+    const sectionOne    = Section({ title: 'Celebrate with a toast', subtitle: 'New Iwai of the Tiger cocktail', button: 'Make a Reservation', img: SectionOneImg }, 'home')
+    const sectionTwo    = Section({ title: 'Your favorites, brought home', subtitle: 'with Delivery, Curbside Pickup & Takeout', button: 'Order Online', img: SectionTwoImg }, 'home')
+    const sectionThree  = Section({ title: 'Introducing the official shop', subtitle: 'Exclusive apparel, accessories & cookware', button: 'Shop Now', img: SectionThreeImg }, 'home')
     // 4
     main.appendChild(sectionOne)
     main.appendChild(sectionTwo)
