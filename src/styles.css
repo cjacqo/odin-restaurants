@@ -399,12 +399,15 @@ main {
     --current-slide: 0;
     position: relative;
     overflow: hidden;
+    width: 100vw;
+    height: 100%;
 }
 .carousel-buttons-container {
     position: absolute;
     top: 90%;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 3;
 }
 .carousel-buttons-container > * {
     padding: 0;
@@ -412,10 +415,10 @@ main {
     border-radius: 50%;
     font-size: 1.5rem;
     cursor: pointer;
-    transition: color 0.1s ease-in;
     width: 25px;
     height: 25px;
     background-color: #FFFFFF;
+    transition: color 0.1s ease-in;
 }
 .carousel-buttons-container > *:hover {
     color: rgba(0,0,0,0.5);

@@ -28,8 +28,10 @@ const CarouselButtons = (num) => {
     const container = document.createElement('div')
     container.classList.add('carousel-buttons-container')
     for (let i = 0; i < num; i++) {
-        const button = document.createElement('button')
+        const button = document.createElement('input')
         button.classList.add('carousel-btn')
+        button.setAttribute('type', 'radio')
+        button.setAttribute('value', i)
 
         button.addEventListener('click', (e) => {
             e.stopPropagation()
