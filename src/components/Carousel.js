@@ -9,8 +9,18 @@ function modulo(num, mod) {
 }
 
 function changeSlide(slideNum) {
+    const buttons = document.querySelectorAll('.carousel-btn')
     const carouselContainer = document.querySelector('.carousel-container')
-    carouselContainer.style.setPropter('--current-slide', slideNum)
+
+    buttons.forEach(btn => {
+        let value = btn.value
+        if (slideNum == value) {
+            btn.checked = true
+        } else {
+            btn.checked = false
+        }
+    })
+    carouselContainer.style.setProperty('--current-slide', slideNum)
 }
 
 const CarouselSlides = (data) => {
@@ -32,9 +42,9 @@ const CarouselButtons = (num) => {
         button.classList.add('carousel-btn')
         button.setAttribute('type', 'radio')
         button.setAttribute('value', i)
+        console.log(button)
 
         button.addEventListener('click', (e) => {
-            e.stopPropagation()
             changeSlide(i)
         })
         
